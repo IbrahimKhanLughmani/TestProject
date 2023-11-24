@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, FlatList, Text, Platform } from 'react-native';
+import { View, FlatList, Text, Platform, SafeAreaView } from 'react-native';
 import InputField from '../components/InputField';
 import { Button, ListItem } from 'react-native-elements';
 import StatsModule from '../components/StatsModule';
@@ -25,7 +25,7 @@ const Home = () => {
     }
 
     return(
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 40}}>
+        <SafeAreaView style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 40}}>
             <Button 
                 buttonStyle={{marginBottom: 20}} 
                 title='Check Native Module' 
@@ -59,7 +59,7 @@ const Home = () => {
                     )
                 }}
             />
-        </View>
+        </SafeAreaView>
     )
 };
 
