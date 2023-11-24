@@ -9,19 +9,14 @@ const Home = () => {
     const [restaurants, setRestaurants] = useState([])
 
     const getStats = () => {
-        if(Platform.OS === 'android'){
-            StatsModule.checkForPermission((stats, error) => {
-                if(error){
-                    console.log(error)
-                }
-                else{
-                    console.log(stats)
-                }
-            })
-        }
-        else{
-            // do nothing
-        }
+        StatsModule.checkForPermission((stats, error) => {
+            if(error){
+                console.error(error)
+            }
+            else{
+                console.log(stats)
+            }
+        })
     }
 
     return(
